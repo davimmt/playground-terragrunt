@@ -50,7 +50,7 @@ nacls = [
     rules = {
       ingress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "0.0.0.0/0"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
@@ -60,7 +60,7 @@ nacls = [
       ],
       egress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "0.0.0.0/0"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
@@ -75,22 +75,22 @@ nacls = [
     rules = {
       ingress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "0.0.0.0/0"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
-          from_port  = 22
-          to_port    = 22
+          from_port  = 443
+          to_port    = 443
         }
       ],
       egress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "0.0.0.0/0"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
-          from_port  = 22
-          to_port    = 22
+          from_port  = 443
+          to_port    = 443
         }
       ]
     }
@@ -100,22 +100,38 @@ nacls = [
     rules = {
       ingress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "10.50.1.0/24"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
-          from_port  = 22
-          to_port    = 22
+          from_port  = 8080
+          to_port    = 8080
+        },
+        {
+          cidr_block = "10.50.2.0/24"
+          rule_no    = 101
+          protocol   = "tcp"
+          action     = "allow"
+          from_port  = 8080
+          to_port    = 8080
         }
       ],
       egress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "10.50.1.0/24"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
-          from_port  = 22
-          to_port    = 22
+          from_port  = 8080
+          to_port    = 8080
+        },
+        {
+          cidr_block = "10.50.2.0/24"
+          rule_no    = 101
+          protocol   = "tcp"
+          action     = "allow"
+          from_port  = 8080
+          to_port    = 8080
         }
       ]
     }
@@ -125,22 +141,38 @@ nacls = [
     rules = {
       ingress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "10.50.3.0/24"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
-          from_port  = 22
-          to_port    = 22
+          from_port  = 5432
+          to_port    = 5432
+        },
+        {
+          cidr_block = "10.50.4.0/24"
+          rule_no    = 101
+          protocol   = "tcp"
+          action     = "allow"
+          from_port  = 5432
+          to_port    = 5432
         }
       ],
       egress = [
         {
-          cidr_block = "10.0.0.0/8"
+          cidr_block = "10.50.3.0/24"
           rule_no    = 100
           protocol   = "tcp"
           action     = "allow"
-          from_port  = 22
-          to_port    = 22
+          from_port  = 5432
+          to_port    = 5432
+        },
+        {
+          cidr_block = "10.50.4.0/24"
+          rule_no    = 101
+          protocol   = "tcp"
+          action     = "allow"
+          from_port  = 5432
+          to_port    = 5432
         }
       ]
     }
