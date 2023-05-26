@@ -4,8 +4,8 @@ resource "aws_eip" "eip" {
     if lookup(subnet.tags_all, "NGW", false) != false
   }
 
-  vpc  = true
-  tags = merge(var.tags, { Name = each.value.NGW })
+  domain = "vpc"
+  tags   = merge(var.tags, { Name = each.value.NGW })
 }
 
 resource "aws_nat_gateway" "ngw" {

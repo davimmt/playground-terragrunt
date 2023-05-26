@@ -23,7 +23,7 @@ dependency "vpc_endpoint" {
   config_path = "../vpc-endpoint"
 
   mock_outputs = {
-    vpc_endpoints = ["mock-vpc-endpoints"]
+    vpc_endpoints = { igw = { id = "mock" }, ngw = { ngw_mock = { id = "mock" } } }
   }
 }
 
