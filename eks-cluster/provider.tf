@@ -5,7 +5,7 @@ locals {
     Squad = "devops"
     Terragrunt = "true"
     Environment = "POC"
-    Path = "route-table"
+    Path = "eks"
   }
 
   override_ignore_tags_key_prefixes = []

@@ -20,6 +20,7 @@ locals {
   default_tags = {
     Squad = "devops"
     Terragrunt = "true"
+    Environment = "POC"
     Path = "${path_relative_to_include()}"
   }
 

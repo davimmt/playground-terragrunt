@@ -4,6 +4,7 @@ locals {
   default_tags = {
     Squad = "devops"
     Terragrunt = "true"
+    Environment = "POC"
     Path = "subnet"
   }
 
